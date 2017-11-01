@@ -17,9 +17,6 @@ class ComposerStaticInit2f843c10c67a59fd0365d70b65716410
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '8a9dc1de0ca7e01f3e08231539562f61' => __DIR__ . '/..' . '/aws/aws-sdk-php/src/functions.php',
-        '793063348507beb4d23dd59afbef8dee' => __DIR__ . '/../..' . '/src/Dragon/Foundation/helpers.php',
-        'c9fe817cd9c17558822bf458305930c3' => __DIR__ . '/../..' . '/src/Dragon/Support/helpers.php',
-        'd1da088bc1f6c9d2a4eb232f150929a3' => __DIR__ . '/../..' . '/tests/Database/stubs/MigrationCreatorFakeMigration.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -35,6 +32,7 @@ class ComposerStaticInit2f843c10c67a59fd0365d70b65716410
         'T' => 
         array (
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
+            'Tests\\' => 6,
         ),
         'S' => 
         array (
@@ -97,7 +95,6 @@ class ComposerStaticInit2f843c10c67a59fd0365d70b65716410
         ),
         'D' => 
         array (
-            'Dragon\\Tests\\' => 13,
             'Dragon\\' => 7,
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
@@ -136,6 +133,10 @@ class ComposerStaticInit2f843c10c67a59fd0365d70b65716410
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
+        ),
+        'Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/framework/src/Tests',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -253,13 +254,9 @@ class ComposerStaticInit2f843c10c67a59fd0365d70b65716410
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
         ),
-        'Dragon\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests',
-        ),
         'Dragon\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/Dragon',
+            0 => __DIR__ . '/../..' . '/framework/src/Dragon',
         ),
         'Dotenv\\' => 
         array (

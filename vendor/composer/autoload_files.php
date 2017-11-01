@@ -16,7 +16,4 @@ return array(
     '5255c38a0faeba867671b61dfda6d864' => $vendorDir . '/paragonie/random_compat/lib/random.php',
     '2c102faa651ef8ea5874edb585946bce' => $vendorDir . '/swiftmailer/swiftmailer/lib/swift_required.php',
     '8a9dc1de0ca7e01f3e08231539562f61' => $vendorDir . '/aws/aws-sdk-php/src/functions.php',
-    '793063348507beb4d23dd59afbef8dee' => $baseDir . '/src/Dragon/Foundation/helpers.php',
-    'c9fe817cd9c17558822bf458305930c3' => $baseDir . '/src/Dragon/Support/helpers.php',
-    'd1da088bc1f6c9d2a4eb232f150929a3' => $baseDir . '/tests/Database/stubs/MigrationCreatorFakeMigration.php',
 );

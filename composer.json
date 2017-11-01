@@ -56,19 +56,16 @@
     },
     "autoload": {
         "files": [
-            "src/Dragon/Foundation/helpers.php",
-            "src/Dragon/Support/helpers.php"
         ],
         "psr-4": {
-            "Dragon\\": "src/Dragon/"
+            "Dragon\\": "framework/src/Dragon/"
         }
     },
     "autoload-dev": {
         "files": [
-            "tests/Database/stubs/MigrationCreatorFakeMigration.php"
         ],
         "psr-4": {
-            "Dragon\\Tests\\": "tests/"
+            "Tests\\": "framework/src/Tests/"
         }
     },
     "extra": {
