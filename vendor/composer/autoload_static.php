@@ -256,7 +256,7 @@ class ComposerStaticInit2f843c10c67a59fd0365d70b65716410
         ),
         'Dragon\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/framework/src/Dragon',
+            0 => __DIR__ . '/../..',
         ),
         'Dotenv\\' => 
         array (

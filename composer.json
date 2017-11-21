@@ -58,7 +58,7 @@
         "files": [
         ],
         "psr-4": {
-            "Dragon\\": "framework/src/Dragon/"
+            "Lenog\\": "framework/src/Lenog/"
         }
     },
     "autoload-dev": {
