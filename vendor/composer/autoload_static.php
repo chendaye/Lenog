@@ -73,6 +73,7 @@ class ComposerStaticInit2f843c10c67a59fd0365d70b65716410
         ),
         'L' => 
         array (
+            'Lenog\\' => 6,
             'League\\Flysystem\\' => 17,
         ),
         'J' => 
@@ -95,7 +96,6 @@ class ComposerStaticInit2f843c10c67a59fd0365d70b65716410
         ),
         'D' => 
         array (
-            'Dragon\\' => 7,
             'Dotenv\\' => 7,
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Inflector\\' => 26,
@@ -226,6 +226,10 @@ class ComposerStaticInit2f843c10c67a59fd0365d70b65716410
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Lenog\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/framework/src/Lenog',
+        ),
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
@@ -253,10 +257,6 @@ class ComposerStaticInit2f843c10c67a59fd0365d70b65716410
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
-        ),
-        'Dragon\\' => 
-        array (
-            0 => __DIR__ . '/../..',
         ),
         'Dotenv\\' => 
         array (

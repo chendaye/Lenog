@@ -29,4 +29,9 @@ class FirstTest  extends TestCase
         $unitTest = new UnitTest();
         $this->assertEquals('first unit tests', $unitTest->unit_test());
     }
+
+    public function first()
+    {
+        echo 777;
+    }
 }
