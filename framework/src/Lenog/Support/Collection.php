@@ -186,72 +186,6 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
         return new static(Arr::collapse($this->items));
     }
 
-    /**
-     * 以数组形式获取集合的值
-     * @return array
-     */
-    public function toArray()
-    {
-        //array_map() 函数将用户自定义函数作用到数组中的每个值上，并返回用户自定义函数作用后的带有新值的数组
-        return array_map(function ($value){
-            return $value instanceof Arrayable ? $value->toArray() : $value;
-        }, $this->items);
-    }
-
-    /**
-     * 以json形式获取集合的值
-     * @param int $options
-     * @return string
-     */
-    public function toJson($options = 0)
-    {
-        return json_encode($this->jsonSerialize(), $options);
-    }
-
-
-    /**
-     * 把对象转化成json序列
-     * @return array
-     */
-    public function jsonSerialize()
-    {
-        return array_map(function ($value) {
-            if($value instanceof JsonSerializable){
-                return $value->jsonSerialize();
-            } elseif ($value instanceof Jsonable){
-                return json_encode($value->toJson(), true);
-            }elseif ($value instanceof Arrayable){
-                return $value->toArray();
-            } else {
-                return $value;
-            }
-        }, $this->items);
-    }
-
-
-    /**
-     * 从集合或数组中获得的项的数组
-     * @param $items
-     * @return array|mixed|string
-     */
-    public function getArrayableItems($items)
-    {
-        if(is_array($items)){
-            return $items;
-        } elseif ($items instanceof self) {
-            return $items->all();
-        } elseif ($items instanceof Arrayable) {
-            return $items->toArray();
-        } elseif ($items instanceof Jsonable) {
-            return json_encode($items->toJson(), true);
-        } elseif ($items instanceof JsonSerializable) {
-            return $items->jsonSerialize();
-        } elseif ($items instanceof Traversable) {
-            return iterator_to_array($items);
-        }
-
-        return (array)$items;
-    }
 
     /**
      * 检查项目是否存在于集合中
@@ -323,6 +257,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
         return $result;
     }
 
+
     /**
      * 打印集合
      */
@@ -330,6 +265,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
     {
         dd($this->all());
     }
+
 
     /**
      * 输出集合
@@ -378,6 +314,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
         return new static(array_diff_key($this->items, $this->getArrayableItems($items)));
     }
 
+
     /**
      * 用回调函数遍历集合每一个元素
      * @param callable $callback
@@ -391,6 +328,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
 
         return $this;
     }
+
 
     /**
      * 用回调函数遍历每一个集合分组
@@ -458,6 +396,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
         return new static(array_filter($this->items));
     }
 
+
     /**
      * 如果值是 真，则应用回调
      * @param $value
@@ -507,6 +446,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
         return $this->filter($this->operatorForWhere($key, $operate, $value));
     }
 
+
     /**
      *Get an operator checker callback.
      * @param $key
@@ -538,6 +478,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
             }
         };
     }
+
 
     /**
      * 过滤集合元素通过严格比较给定的键值对
@@ -635,6 +576,20 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
     public function flip()
     {
         return new static(array_flip($this->items));
+    }
+
+    /**
+     * 销毁集合元素
+     * @param $keys
+     * @return $this
+     */
+    public function forget($keys)
+    {
+        foreach ((array)$keys as $key) {
+            $this->offsetUnset($key);
+        }
+
+        return $this;
     }
 
     /**
@@ -842,6 +797,22 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
     }
 
     /**
+     * Run a dictionary map over the items.
+     * 回调函数应该返回一个单一的键值对
+     * @param callable $callback
+     * @return static
+     */
+    public function mapToDictionary(callable $callback)
+    {
+        $dictionary = $this->map($callback)->reduce(function($group, $pair){
+            $group[key($pair)][] = reset($pair);
+            return $group;
+        }, []);
+
+        return new static($dictionary);
+    }
+
+    /**
      * Run a grouping map over the items.
      * 回调函数应该返回一个单一的键值对
      * @param callable $callback
@@ -1010,6 +981,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
         return $this->slice($offset, $perPage);
     }
 
+
     /**
      * 区分集合为2个数组 用给定的回调函数或 keys
      * @param $callback
@@ -1047,6 +1019,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
     {
         return array_pop($this->items);
     }
+
 
     /**
      * 在集合前面追加值
@@ -1097,23 +1070,6 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
     public function pull($key, $default = null)
     {
         return Arr::pull($this->items, $key, $default);
-    }
-
-
-
-
-    /**
-     * 销毁集合元素
-     * @param $keys
-     * @return $this
-     */
-    public function forget($keys)
-    {
-        foreach ((array)$keys as $key) {
-            $this->offsetUnset($key);
-        }
-
-        return $this;
     }
 
 
@@ -1240,38 +1196,17 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
         return new static($items);
     }
 
-
     /**
-     * Run a dictionary map over the items.
-     * 回调函数应该返回一个单一的键值对
-     * @param callable $callback
+     * 集合元素分片
+     * @param $offset
+     * @param null $length
      * @return static
      */
-    public function mapToDictionary(callable $callback)
+    public function slice($offset, $length = null)
     {
-        $dictionary = $this->map($callback)->reduce(function($group, $pair){
-            $group[key($pair)][] = reset($pair);
-            return $group;
-        }, []);
-
-        return new static($dictionary);
+        //array_slice() 函数在数组中根据条件取出一段值，并返回
+        return new static(array_slice($this->items, $offset, $length, true));
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1377,49 +1312,6 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
         return new static(array_splice($this->items, $offset, $length, $replacement));
     }
 
-    /**
-     * 设置集合元素
-     * @param mixed $offset
-     * @param mixed $value
-     */
-    public function offsetSet($offset, $value)
-    {
-        if(is_null($offset)){
-            $this->items[] = $value;
-        }else{
-            $this->items[$offset] = $value;
-        }
-    }
-
-    /**
-     * 集合元素分片
-     * @param $offset
-     * @param null $length
-     * @return static
-     */
-    public function slice($offset, $length = null)
-    {
-        //array_slice() 函数在数组中根据条件取出一段值，并返回
-        return new static(array_slice($this->items, $offset, $length, true));
-    }
-
-
-    /**
-     * 获取一个值检索回调
-     * @param $value
-     * @return \Closure
-     */
-    protected function valueRetriever($value)
-    {
-        if($this->useAsCallable($value)) return $value;
-
-        return function ($item) use($value){
-            return data_get($item, $value);
-        };
-    }
-
-
-
 
     /**
      * 集合求和
@@ -1436,6 +1328,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
             return $result + $callback($item);
         }, 0);
     }
+
 
     /**
      * 获取集合前几项或者最后几项
@@ -1517,6 +1410,21 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
         return new static(array_values($this->items));
     }
 
+
+    /**
+     * 获取一个值检索回调
+     * @param $value
+     * @return \Closure
+     */
+    protected function valueRetriever($value)
+    {
+        if($this->useAsCallable($value)) return $value;
+
+        return function ($item) use($value){
+            return data_get($item, $value);
+        };
+    }
+
     /**
      *用一个或多个数组将集合压缩到一起
      * new Collection([1, 2, 3])->zip([4, 5, 6]);
@@ -1549,6 +1457,47 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
     public function pad($size, $value)
     {
         return new static(array_pad($this->items,$size, $value));
+    }
+
+    /**
+     * 以数组形式获取集合的值
+     * @return array
+     */
+    public function toArray()
+    {
+        //array_map() 函数将用户自定义函数作用到数组中的每个值上，并返回用户自定义函数作用后的带有新值的数组
+        return array_map(function ($value){
+            return $value instanceof Arrayable ? $value->toArray() : $value;
+        }, $this->items);
+    }
+
+    /**
+     * 把对象转化成json序列
+     * @return array
+     */
+    public function jsonSerialize()
+    {
+        return array_map(function ($value) {
+            if($value instanceof JsonSerializable){
+                return $value->jsonSerialize();
+            } elseif ($value instanceof Jsonable){
+                return json_encode($value->toJson(), true);
+            }elseif ($value instanceof Arrayable){
+                return $value->toArray();
+            } else {
+                return $value;
+            }
+        }, $this->items);
+    }
+
+    /**
+     * 以json形式获取集合的值
+     * @param int $options
+     * @return string
+     */
+    public function toJson($options = 0)
+    {
+        return json_encode($this->jsonSerialize(), $options);
     }
 
     /**
@@ -1588,6 +1537,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
         return new self($this);
     }
 
+
     /**
      * 判断键值是否存在
      * @param mixed $key
@@ -1609,6 +1559,21 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
     }
 
     /**
+     * 设置集合元素
+     * @param mixed $offset
+     * @param mixed $value
+     */
+    public function offsetSet($offset, $value)
+    {
+        if(is_null($offset)){
+            $this->items[] = $value;
+        }else{
+            $this->items[$offset] = $value;
+        }
+    }
+
+
+    /**
      * 销毁给定的键值
      * @param mixed $key
      */
@@ -1625,6 +1590,33 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
     {
         return $this->toJson();
     }
+
+
+
+    /**
+     * 从集合或数组中获得的项的数组
+     * @param $items
+     * @return array|mixed|string
+     */
+    public function getArrayableItems($items)
+    {
+        if(is_array($items)){
+            return $items;
+        } elseif ($items instanceof self) {
+            return $items->all();
+        } elseif ($items instanceof Arrayable) {
+            return $items->toArray();
+        } elseif ($items instanceof Jsonable) {
+            return json_encode($items->toJson(), true);
+        } elseif ($items instanceof JsonSerializable) {
+            return $items->jsonSerialize();
+        } elseif ($items instanceof Traversable) {
+            return iterator_to_array($items);
+        }
+
+        return (array)$items;
+    }
+    
 
     /**
      * Add a method to the list of proxied methods.
@@ -1649,6 +1641,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
 
         return new HigherOrderCollectionProxy($this, $key);
     }
+
 }
 
 
