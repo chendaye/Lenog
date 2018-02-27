@@ -1616,7 +1616,7 @@ class Collection implements ArrayAccess,Arrayable,Countable,IteratorAggregate,Js
 
         return (array)$items;
     }
-    
+
 
     /**
      * Add a method to the list of proxied methods.
