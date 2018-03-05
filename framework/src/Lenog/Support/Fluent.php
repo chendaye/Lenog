@@ -181,4 +181,14 @@ class Fluent implements \ArrayAccess, Arrayable, Jsonable, \JsonSerializable
         return $this->offsetExists($name);
     }
 
+    /**
+     * 自动销毁属性
+     *
+     * @param $name
+     */
+    public function __unset($name)
+    {
+        $this->offsetUnset($name);
+    }
+
 }
