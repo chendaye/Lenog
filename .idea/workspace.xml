@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="738e9650-4edf-465c-822e-1d264df01181" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/HigherOrderTapProxy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/HtmlString.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/InteractsWithTime.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/Manager.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/MessageBag.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/NamespacedItemResolver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/Optional.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/Pluralizer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/Str.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/ViewErrorBag.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/src/Lenog/Support/Fluent.php" afterPath="$PROJECT_DIR$/framework/src/Lenog/Support/Fluent.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,77 +20,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Collection.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Collection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Composer.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Composer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
-              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-              <folding>
-                <element signature="e#121#153#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Fluent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Fluent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
-              <caret line="184" column="13" lean-forward="false" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
-              <folding>
-                <element signature="e#6#92#0#PHP" expanded="true" />
-                <element signature="e#121#159#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="helper.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/helper.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13910">
-              <caret line="604" column="23" lean-forward="false" selection-start-line="604" selection-start-column="17" selection-end-line="604" selection-end-column="23" />
-              <folding>
-                <element signature="e#7#29#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HigherOrderCollectionProxy.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/HigherOrderCollectionProxy.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HigherOrderTapProxy.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/HigherOrderTapProxy.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="HtmlString.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/HtmlString.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
+            <state relative-caret-position="962">
               <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
@@ -104,8 +35,8 @@
       <file leaf-file-name="InteractsWithTime.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/InteractsWithTime.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="69" column="1" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+            <state relative-caret-position="1638">
+              <caret line="69" column="1" lean-forward="false" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
               <folding>
                 <element signature="e#118#135#0#PHP" expanded="true" />
               </folding>
@@ -116,8 +47,8 @@
       <file leaf-file-name="Manager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Manager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="134" column="7" lean-forward="true" selection-start-line="134" selection-start-column="7" selection-end-line="134" selection-end-column="7" />
+            <state relative-caret-position="3302">
+              <caret line="134" column="7" lean-forward="false" selection-start-line="134" selection-start-column="7" selection-end-line="134" selection-end-column="7" />
               <folding>
                 <element signature="e#120#148#0#PHP" expanded="true" />
               </folding>
@@ -125,11 +56,78 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageBag.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MessageBag.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/MessageBag.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
+            <state relative-caret-position="9646">
               <caret line="379" column="18" lean-forward="false" selection-start-line="379" selection-start-column="18" selection-end-line="379" selection-end-column="18" />
+              <folding>
+                <element signature="e#120#153#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NamespacedItemResolver.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/NamespacedItemResolver.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1950">
+              <caret line="80" column="7" lean-forward="false" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Optional.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Optional.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1534">
+              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pluralizer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Pluralizer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2834">
+              <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceProvider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/ServiceProvider.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+              <folding>
+                <element signature="e#117#158#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Str.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Str.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="681" column="7" lean-forward="false" selection-start-line="681" selection-start-column="7" selection-end-line="681" selection-end-column="7" />
+              <folding>
+                <element signature="e#120#153#0#PHP" expanded="true" />
+                <element signature="e#12913#19930#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewErrorBag.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/ViewErrorBag.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="114" column="19" lean-forward="false" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
               <folding>
                 <element signature="e#120#153#0#PHP" expanded="true" />
               </folding>
@@ -179,11 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/framework/src/Lenog/Contracts/Queue/QueueableCollection.php" />
-        <option value="$PROJECT_DIR$/framework/src/Lenog/Contracts/Queue/QueueableEntity.php" />
-        <option value="$PROJECT_DIR$/framework/src/Lenog/Contracts/Queue/ShouldQueue.php" />
-        <option value="$PROJECT_DIR$/framework/src/Lenog/Contracts/Redis/Factory.php" />
-        <option value="$PROJECT_DIR$/framework/src/Lenog/Contracts/Redis/LimiterTimeoutException.php" />
         <option value="$PROJECT_DIR$/framework/src/Lenog/Contracts/Routing/BindingRegister.php" />
         <option value="$PROJECT_DIR$/framework/src/Lenog/Contracts/Routing/Registrar.php" />
         <option value="$PROJECT_DIR$/framework/src/Lenog/Contracts/Routing/ResponseFactory.php" />
@@ -230,6 +223,11 @@
         <option value="$PROJECT_DIR$/framework/src/Lenog/Support/InteractsWithTime.php" />
         <option value="$PROJECT_DIR$/framework/src/Lenog/Support/Manager.php" />
         <option value="$PROJECT_DIR$/framework/src/Lenog/Support/MessageBag.php" />
+        <option value="$PROJECT_DIR$/framework/src/Lenog/Support/NamespacedItemResolver.php" />
+        <option value="$PROJECT_DIR$/framework/src/Lenog/Support/Optional.php" />
+        <option value="$PROJECT_DIR$/framework/src/Lenog/Support/Pluralizer.php" />
+        <option value="$PROJECT_DIR$/framework/src/Lenog/Support/Str.php" />
+        <option value="$PROJECT_DIR$/framework/src/Lenog/Support/ViewErrorBag.php" />
       </list>
     </option>
   </component>
@@ -262,6 +260,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -342,8 +342,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -501,12 +499,15 @@
       <workItem from="1519370386138" duration="1713000" />
       <workItem from="1519616965778" duration="598000" />
       <workItem from="1519702401130" duration="15626000" />
-      <workItem from="1520223022839" duration="8750000" />
+      <workItem from="1520223022839" duration="12065000" />
+      <workItem from="1520301654896" duration="14144000" />
+      <workItem from="1520504117551" duration="2593000" />
+      <workItem from="1520580695335" duration="8709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267250000" />
+    <option name="totallyTimeSpent" value="296011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -567,51 +568,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2592">
-          <caret line="96" column="16" lean-forward="false" selection-start-line="96" selection-start-column="16" selection-end-line="96" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2484">
-          <caret line="92" column="10" lean-forward="false" selection-start-line="92" selection-start-column="10" selection-end-line="92" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_8.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="603" column="9" lean-forward="false" selection-start-line="603" selection-start-column="9" selection-end-line="603" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="977" column="9" lean-forward="false" selection-start-line="977" selection-start-column="9" selection-end-line="977" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Carbon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85020">
-          <caret line="3285" column="20" lean-forward="false" selection-start-line="3285" selection-start-column="20" selection-end-line="3285" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Contracts/Queue/Job.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-780">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Contracts/Queue/QueueableCollection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -770,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
           <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -813,10 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="false" />
-            <element signature="e#125#153#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -824,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="50" column="1" lean-forward="false" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -848,7 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
           <caret line="43" column="6" lean-forward="false" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -864,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -873,18 +821,18 @@
         <state relative-caret-position="1248">
           <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
-            <element signature="e#121#153#0#PHP" expanded="true" />
+            <element signature="e#121#153#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Fluent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
+        <state relative-caret-position="4628">
           <caret line="184" column="13" lean-forward="false" selection-start-line="184" selection-start-column="13" selection-end-line="184" selection-end-column="13" />
           <folding>
-            <element signature="e#6#92#0#PHP" expanded="true" />
-            <element signature="e#121#159#0#PHP" expanded="true" />
+            <element signature="e#6#92#0#PHP" expanded="false" />
+            <element signature="e#121#159#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -899,17 +847,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13910">
+        <state relative-caret-position="15548">
           <caret line="604" column="23" lean-forward="false" selection-start-line="604" selection-start-column="17" selection-end-line="604" selection-end-column="23" />
           <folding>
-            <element signature="e#7#29#0#PHP" expanded="true" />
+            <element signature="e#7#29#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/HigherOrderCollectionProxy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="1222">
           <caret line="52" column="16" lean-forward="false" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
           <folding />
         </state>
@@ -917,15 +865,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/HigherOrderTapProxy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+        <state relative-caret-position="702">
+          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/HtmlString.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
+        <state relative-caret-position="962">
           <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
@@ -935,8 +883,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/InteractsWithTime.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="69" column="1" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+        <state relative-caret-position="1638">
+          <caret line="69" column="1" lean-forward="false" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
           <folding>
             <element signature="e#118#135#0#PHP" expanded="true" />
           </folding>
@@ -945,8 +893,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Manager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="134" column="7" lean-forward="true" selection-start-line="134" selection-start-column="7" selection-end-line="134" selection-end-column="7" />
+        <state relative-caret-position="3302">
+          <caret line="134" column="7" lean-forward="false" selection-start-line="134" selection-start-column="7" selection-end-line="134" selection-end-column="7" />
           <folding>
             <element signature="e#120#148#0#PHP" expanded="true" />
           </folding>
@@ -955,8 +903,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/MessageBag.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
+        <state relative-caret-position="9646">
           <caret line="379" column="18" lean-forward="false" selection-start-line="379" selection-start-column="18" selection-end-line="379" selection-end-column="18" />
+          <folding>
+            <element signature="e#120#153#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/NamespacedItemResolver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="80" column="7" lean-forward="false" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Optional.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1534">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Pluralizer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2834">
+          <caret line="114" column="0" lean-forward="false" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/ServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="e#117#158#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/Str.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="681" column="7" lean-forward="false" selection-start-line="681" selection-start-column="7" selection-end-line="681" selection-end-column="7" />
+          <folding>
+            <element signature="e#120#153#0#PHP" expanded="true" />
+            <element signature="e#12913#19930#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/framework/src/Lenog/Support/ViewErrorBag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="114" column="19" lean-forward="false" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
           <folding>
             <element signature="e#120#153#0#PHP" expanded="true" />
           </folding>
